@@ -11,5 +11,5 @@
     "exclude": [
       "bases/ignorar"
     ],
-    "include": [ "bases/ES6" ]
+    "include": [ "bases/classes" ]
   }
