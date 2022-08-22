@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
       "target": "es5",
-      "module": "commonjs",
+      "module": "amd",
       "strict": true,
-      "noImplicitAny": true
-    }
+      "noImplicitAny": true,
+      "removeComments": true,
+      "outFile": "./bases/main.js",
+      "sourceMap": true
+    },
+    "exclude": [
+      "bases/ignorar"
+    ]
   }
