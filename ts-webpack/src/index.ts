@@ -1,7 +1,13 @@
-import { getPokemon } from "./generics/get-pokemon";
+import { PokemonDec } from "./decorators/pokemon-class";
 
-console.log( getPokemon(2) );
+const charmander = new PokemonDec('Charmander');
 
-getPokemon(4).then( pokemon => console.log(pokemon.height) )
-            .catch( console.error )
-            .finally( () => console.log('Fin de pokemon') )
+// (PokemonDec.prototype as any).customName = 'Pikachu'; //lo bloqueamos con el decorador block
+
+console.log(charmander);
+
+charmander.savePokemonToDB(32);
+charmander.savePokemonToDB(3322);
+
+charmander.publicApi = 'Buuuu';
+
