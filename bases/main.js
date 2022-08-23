@@ -1,130 +1,91 @@
 "use strict";
+const conducirBatimovil = (auto) => {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelerar();
+};
+const batimovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelerar() {
+        console.log("...... gogogo!!!");
+    }
+};
+const guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+const reir = (guason) => {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+const ciudadGotica = (ciudadanos) => {
+    return ciudadanos.length;
+};
+class Persona {
+    constructor(nombre, edad, sexo, estadoCivil) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+    }
+    imprimirBio() {
+        console.log(`${this.nombre} tiene ${this.edad} años, y esta ${this.estadoCivil}`);
+    }
+}
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-    }
-    class Xmen extends Mutante {
-        salvarMundo() {
-            return 'Mundo salvado!';
-        }
-    }
-    ;
-    class Villain extends Mutante {
-        conquistarMundo() {
-            return 'Mundo conquistado!';
-        }
-    }
-    ;
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    const magneto = new Villain('magneto', 'Magnus');
-    const printName = (character) => {
-        console.log(character.realName);
+    let flash = {
+        name: 'Barry Allen',
+        age: 24,
+        powers: ['Super speed', 'Time travel']
     };
-    printName(wolverine);
-    printName(magneto);
+    let spiderman = {
+        name: 'Barry Allen',
+        powers: ['Super speed', 'Time travel'],
+        getName() {
+            return this.name;
+        }
+    };
 })();
 (() => {
-    class Avenger {
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-        static getAvgAge() {
-            return this.avgAge;
-        }
-        bio() {
-            return `${this.name} ${this.team}`;
-        }
-    }
-    Avenger.avgAge = 35;
-    const antman = new Avenger('Antman', 'Capitan', 'Scott Lang');
-    console.log({ antman });
-    console.log(Avenger.avgAge);
-    console.log(Avenger.getAvgAge());
-})();
-(() => {
-    class Avenger {
-        constructor(name, realName) {
+    class Mutant {
+        constructor(age, name, realName) {
+            this.age = age;
             this.name = name;
             this.realName = realName;
-            console.log('Constructor Avenger llamado!');
+            this.age = age;
+            this.name = name;
+            this.realName = realName;
         }
-        getFullName() {
+        mutantPower(id) {
             return `${this.name} ${this.realName}`;
         }
     }
-    class Xmen extends Avenger {
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    console.log(wolverine);
-    class Xmen2 extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-            console.log('Constructor Xmen2 llamado');
-        }
-        getFullNameFromXmen2() {
-            console.log(super.getFullName());
-        }
-    }
-    const wolverine2 = new Xmen('Wolverine', 'Logan');
-    console.log(wolverine2);
 })();
 (() => {
-    class Avenger {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-            console.log('Constructor Avenger llamado!');
+    const client = {
+        name: 'Salome',
+        age: 22,
+        address: {
+            id: 124,
+            zip: 'JD2 DAS',
+            city: 'Otawa'
+        },
+        getFullAddress(id) {
+            return this.address.city;
         }
-        getFullName() {
-            return `${this.name} ${this.realName}`;
-        }
-    }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-            console.log('Constructor Xmen2 llamado');
-        }
-        get fullName() {
-            return `${this.name} - ${this.fullName}`;
-        }
-        set fullName(name) {
-            this.name = this.name;
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan', true);
-    console.log(wolverine.fullName);
-    wolverine.fullName = 'Pepe';
-    console.log(wolverine.fullName);
+    };
 })();
 (() => {
-    class Apocalipsis {
-        constructor(name) {
-            this.name = name;
-        }
-        static callApocalipsis() {
-            if (!Apocalipsis.instance) {
-                Apocalipsis.instance = new Apocalipsis('Soy apocalipsis el unico');
-            }
-            return Apocalipsis.instance;
-        }
-        changeName(newName) {
-            this.name = newName;
-        }
-    }
-    const apocalipsis = Apocalipsis.callApocalipsis();
-    const apocalipsis2 = Apocalipsis.callApocalipsis();
-    const apocalipsis3 = Apocalipsis.callApocalipsis();
-    apocalipsis.changeName('Xavier');
-    console.log(apocalipsis, apocalipsis2, apocalipsis3);
+    let addNumberFucntion;
+    addNumberFucntion = (a, b) => {
+        return a + b;
+    };
 })();
 //# sourceMappingURL=main.js.map
